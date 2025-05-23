@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffe6f0, #fff0f5);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Birthday quote */
+.quote-box {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #d63384;
+  z-index: 10;
+}
+
+.quote-box h1 {
+  font-size: 3em;
+}
+
+.quote-box p {
+  font-size: 1.5em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Heart shower animation */
+.heart-container img {
+  position: absolute;
+  width: 30px;
+  animation: fall 5s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Floating balloons */
+.balloon-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 5;
+}
+
+.balloon {
+  width: 100px;
+  animation: floatBalloon 6s ease-in-out infinite;
+}
+
+@keyframes floatBalloon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
